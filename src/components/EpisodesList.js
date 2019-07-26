@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
+import EpisodeCard from './EpisodeCard'
 
 export default function EpisodesList() {
     const[episodesList, setEpisodesList] = useState([])
@@ -25,10 +26,11 @@ export default function EpisodesList() {
           {episodesList.map(episode => {
               return (
                 <div> 
-                  <h2>{episode.name}</h2>
-                  <h3>{episode.air_date}</h3>
-                  <h3>{episode.episode}</h3>
-                </div> 
+                  <EpisodeCard
+                    name={episode.name}
+                    date={episode.date}
+                    episodenum={episode.episode}
+                />
               )}
           )}
           
