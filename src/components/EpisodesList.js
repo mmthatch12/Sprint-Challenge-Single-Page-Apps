@@ -25,10 +25,9 @@ export default function EpisodesList() {
     
           {episodesList.map(episode => {
               return (
-                <div> 
                   <EpisodeCard
                     name={episode.name}
-                    date={episode.date}
+                    date={episode.air_date}
                     episodenum={episode.episode}
                 />
               )}
