@@ -8,10 +8,12 @@ export default function CharacterList() {
   const[characterList, setCharacterList] = useState([])
 
   useEffect(() => {
-    axios 
+    Axios 
       .get(`https://rickandmortyapi.com/api/character/`)
       .then(response => {
-        setMovie(response.data)
+        const theInfo = response.data.results
+        console.log('theInfo', response.data.results)
+        setCharacterList(theInfo)
       })
       .catch(error => {
         console.error(error)
@@ -21,8 +23,11 @@ export default function CharacterList() {
   }, [])
 
   return <section className='character-list grid-view'>
-
       <h2>TODO: `array.map()` over your state here!</h2>
+      characterList.map(character => {
+
+      })
+      
     </section>
 
 }
