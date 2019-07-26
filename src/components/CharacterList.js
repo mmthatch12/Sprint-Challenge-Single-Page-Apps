@@ -22,12 +22,20 @@ export default function CharacterList() {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, [])
 
-  return <section className='character-list grid-view'>
-      <h2>TODO: `array.map()` over your state here!</h2>
-      characterList.map(character => {
+  return (
+    <section className='character-list grid-view'>
 
-      })
+      {characterList.map(character => {
+          return (
+            <div> 
+              <h2>{character.name}</h2>
+              <h3>{character.status}</h3>
+              <h3>{character.species}</h3>
+            </div> 
+          )}
+      )}
       
     </section>
+  )
 
 }
