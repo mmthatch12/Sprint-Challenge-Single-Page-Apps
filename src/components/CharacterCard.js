@@ -1,4 +1,12 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const CharacterDiv = styled.div`
+  border: 2px solid grey;
+
+`;
+
+
 
 export default function CharacterCard ({ image, name, species, status, location, origin }) {
   return ( 
