@@ -5,7 +5,10 @@ const LocationDiv = styled.div`
   border: 1px solid grey;
   border-radius: 5px;
   font-size: 1rem;
-  margin: 20px;
+  width: 40%;
+  margin: 10px 0px 10px 5px;
+  padding: 10px;
+
 `;
 
 export default function LocationCard ({ name, type, dimension }) {

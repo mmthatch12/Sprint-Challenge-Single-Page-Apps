@@ -6,6 +6,7 @@ const EpisodeDiv = styled.div`
   border-radius: 5px;
   font-size: 1rem;
   margin: 20px;
+  width: 30%;
 `;
 
 export default function EpisodeCard ({ name, date, episodenum }) {
