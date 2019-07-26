@@ -5,10 +5,9 @@ export default function CharacterCard ({ image, name, species, status, location,
     <div>
       <img src={image} />
       <h1>{name}</h1>
-      <h3>{species}</h3>
-      <h3>{status}</h3>
-      <h3>{location}</h3>
-      <h3>{origin}</h3>
+      <h3>{species}{' '}{status}</h3>
+      <h3>Location: {location}</h3>
+      <h3>Origin: {origin}</h3>
     </div>
   )
 }

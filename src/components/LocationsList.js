@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
+import LocationCard from './LocationCard'
 
 export default function LocationsList() {
     const[locationsList, setLocationsList] = useState([])
@@ -24,11 +25,13 @@ export default function LocationsList() {
     
           {locationsList.map(location => {
               return (
-                <div> 
-                  <h2>{location.name}</h2>
-                  <h3>{location.type}</h3>
-                  <h3>{location.dimension}</h3>
-                </div> 
+                <LocationCard 
+                    name={location.name}
+                    type={location.type}
+                    dimension={location.dimension}
+                />
+
+
               )}
           )}
           
