@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
+import CharacterCard from './CharacterCard'
 
 //https://rickandmortyapi.com/api/character/
 
@@ -27,11 +28,14 @@ export default function CharacterList() {
 
       {characterList.map(character => {
           return (
-            <div> 
-              <h2>{character.name}</h2>
-              <h3>{character.status}</h3>
-              <h3>{character.species}</h3>
-            </div> 
+            <CharacterCard 
+              image={character.image}
+              name={character.name}
+              species={character.species}
+              status={character.status}
+              location={character.location.name}
+              origin={character.origin.name}
+            />
           )}
       )}
       
